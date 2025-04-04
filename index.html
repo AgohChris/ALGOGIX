@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>QCM de préparation Robotique ALGOGIX</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 2rem;
+      background: linear-gradient(to right, #f2f4f8, #d9e2ec);
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+    .question {
+      margin-bottom: 1.5rem;
+      padding: 1rem 1.5rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .question h3 {
+      margin-bottom: 0.8rem;
+      color: #34495e;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      cursor: pointer;
+      color: #555;
+    }
+    button {
+      display: block;
+      margin: 2rem auto;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #results {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 2rem;
+      color: #2d3436;
+    }
+    .correction {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <h1>QCM Robotique - Sélection Hackathon</h1>
+  <form id="quizForm">
+    <div class="question">
+      <h3>1. Qu’est-ce qu’un robot ?</h3>
+      <label><input type="checkbox" name="q1" value="A"> A. Un ordinateur avec des roues</label>
+      <label><input type="checkbox" name="q1" value="B"> B. Un système automatique capable d’exécuter des tâches</label>
+      <label><input type="checkbox" name="q1" value="C"> C. Une machine qui imite les actions humaines</label>
+      <label><input type="checkbox" name="q1" value="D"> D. Un programme de messagerie</label>
+    </div>
+
+    <div class="question">
+      <h3>2. Le microcontrôleur utilisé dans la plupart des projets Arduino est :</h3>
+      <label><input type="radio" name="q2" value="A"> A. ATmega328</label>
+      <label><input type="radio" name="q2" value="B"> B. ARM Cortex M0</label>
+      <label><input type="radio" name="q2" value="C"> C. ESP8266</label>
+      <label><input type="radio" name="q2" value="D"> D. Intel 8086</label>
+    </div>
+
+    <div class="question">
+      <h3>3. À quoi servent les broches PWM sur Arduino ?</h3>
+      <label><input type="radio" name="q3" value="A"> A. Transmettre des données série</label>
+      <label><input type="radio" name="q3" value="B"> B. Alimenter des moteurs en courant alternatif</label>
+      <label><input type="radio" name="q3" value="C"> C. Simuler une sortie analogique</label>
+      <label><input type="radio" name="q3" value="D"> D. Programmer la carte Arduino</label>
+    </div>
+
+    <div class="question">
+      <h3>4. Le capteur à ultrasons HC-SR04 mesure :</h3>
+      <label><input type="radio" name="q4" value="A"> A. La lumière ambiante</label>
+      <label><input type="radio" name="q4" value="B"> B. La température</label>
+      <label><input type="radio" name="q4" value="C"> C. La distance</label>
+      <label><input type="radio" name="q4" value="D"> D. La pression</label>
+    </div>
+
+    <div class="question">
+      <h3>5. Quel est le rôle du pont en H dans un robot mobile ?</h3>
+      <label><input type="radio" name="q5" value="A"> A. Accélérer la carte mère</label>
+      <label><input type="radio" name="q5" value="B"> B. Changer le sens de rotation d’un moteur</label>
+      <label><input type="radio" name="q5" value="C"> C. Convertir l’énergie solaire</label>
+      <label><input type="radio" name="q5" value="D"> D. Optimiser le code du robot</label>
+    </div>
+
+    <div class="question">
+      <h3>6. L’unité de mesure de la résistance est :</h3>
+      <label><input type="radio" name="q6" value="A"> A. Ohm</label>
+      <label><input type="radio" name="q6" value="B"> B. Watt</label>
+      <label><input type="radio" name="q6" value="C"> C. Volt</label>
+      <label><input type="radio" name="q6" value="D"> D. Ampère</label>
+    </div>
+
+    <div class="question">
+      <h3>7. En robotique, un servo-moteur est utilisé pour :</h3>
+      <label><input type="radio" name="q7" value="A"> A. Chauffer des composants</label>
+      <label><input type="radio" name="q7" value="B"> B. Déplacer des pièces avec précision angulaire</label>
+      <label><input type="radio" name="q7" value="C"> C. Mesurer l’humidité</label>
+      <label><input type="radio" name="q7" value="D"> D. Émettre des signaux sonores</label>
+    </div>
+
+    <div class="question">
+      <h3>8. L’Arduino est :</h3>
+      <label><input type="radio" name="q8" value="A"> A. Une intelligence artificielle</label>
+      <label><input type="radio" name="q8" value="B"> B. Un IDE uniquement</label>
+      <label><input type="radio" name="q8" value="C"> C. Un microcontrôleur open-source et une plateforme de prototypage</label>
+      <label><input type="radio" name="q8" value="D"> D. Une puce réseau</label>
+    </div>
+
+    <div class="question">
+      <h3>9. Un robot autonome :</h3>
+      <label><input type="radio" name="q9" value="A"> A. Suit un script sans interaction</label>
+      <label><input type="radio" name="q9" value="B"> B. Prend des décisions en fonction de son environnement</label>
+      <label><input type="radio" name="q9" value="C"> C. Nécessite toujours un pilote humain</label>
+      <label><input type="radio" name="q9" value="D"> D. Ne peut fonctionner sans Wi-Fi</label>
+    </div>
+
+    <div class="question">
+      <h3>10. Quel composant permet à un robot de détecter son environnement ?</h3>
+      <label><input type="radio" name="q10" value="A"> A. Résistance</label>
+      <label><input type="radio" name="q10" value="B"> B. Condensateur</label>
+      <label><input type="radio" name="q10" value="C"> C. Capteur</label>
+      <label><input type="radio" name="q10" value="D"> D. Pont diviseur</label>
+    </div>
+
+
+    <div class="question">
+        <h3>11. Quel langage est principalement utilisé pour programmer un Arduino ?</h3>
+        <label><input type="radio" name="q11" value="A"> A. Python</label>
+        <label><input type="radio" name="q11" value="B"> B. Java</label>
+        <label><input type="radio" name="q11" value="C"> C. C/C++</label>
+        <label><input type="radio" name="q11" value="D"> D. HTML</label>
+      </div>
+  
+      <div class="question">
+        <h3>12. Quelle fonction est exécutée en boucle dans un programme Arduino ?</h3>
+        <label><input type="radio" name="q12" value="A"> A. setup()</label>
+        <label><input type="radio" name="q12" value="B"> B. main()</label>
+        <label><input type="radio" name="q12" value="C"> C. loop()</label>
+        <label><input type="radio" name="q12" value="D"> D. start()</label>
+      </div>
+  
+      <div class="question">
+        <h3>13. Quel capteur serait le plus adapté pour détecter une ligne noire sur fond blanc ?</h3>
+        <label><input type="radio" name="q13" value="A"> A. Capteur de température</label>
+        <label><input type="radio" name="q13" value="B"> B. Capteur infrarouge</label>
+        <label><input type="radio" name="q13" value="C"> C. Accéléromètre</label>
+        <label><input type="radio" name="q13" value="D"> D. Capteur de son</label>
+      </div>
+  
+      <div class="question">
+        <h3>14. Quel est le rôle d’un shield Arduino ?</h3>
+        <label><input type="radio" name="q14" value="A"> A. Fournir une alimentation électrique</label>
+        <label><input type="radio" name="q14" value="B"> B. Protéger la carte contre les virus</label>
+        <label><input type="radio" name="q14" value="C"> C. Ajouter des fonctionnalités à la carte</label>
+        <label><input type="radio" name="q14" value="D"> D. Refroidir le microcontrôleur</label>
+      </div>
+  
+      <div class="question">
+        <h3>15. Quelle technologie est utilisée dans les robots pour éviter les obstacles ?</h3>
+        <label><input type="radio" name="q15" value="A"> A. Bluetooth</label>
+        <label><input type="radio" name="q15" value="B"> B. Capteurs à ultrasons</label>
+        <label><input type="radio" name="q15" value="C"> C. LED</label>
+        <label><input type="radio" name="q15" value="D"> D. Écran LCD</label>
+      </div>
+  
+      <div class="question">
+        <h3>16. Le terme "robotique" vient de :</h3>
+        <label><input type="radio" name="q16" value="A"> A. L’anglais "robust"</label>
+        <label><input type="radio" name="q16" value="B"> B. Un mot tchèque signifiant "travail forcé"</label>
+        <label><input type="radio" name="q16" value="C"> C. L’allemand "roboter"</label>
+        <label><input type="radio" name="q16" value="D"> D. Une abréviation de "robo-tech"</label>
+      </div>
+  
+      <div class="question">
+        <h3>17. Quelle entreprise a développé le robot humanoïde ASIMO ?</h3>
+        <label><input type="radio" name="q17" value="A"> A. Toyota</label>
+        <label><input type="radio" name="q17" value="B"> B. Honda</label>
+        <label><input type="radio" name="q17" value="C"> C. Sony</label>
+        <label><input type="radio" name="q17" value="D"> D. Samsung</label>
+      </div>
+  
+      <div class="question">
+        <h3>18. Un capteur gyroscopique mesure :</h3>
+        <label><input type="radio" name="q18" value="A"> A. La lumière</label>
+        <label><input type="radio" name="q18" value="B"> B. La température</label>
+        <label><input type="radio" name="q18" value="C"> C. L’orientation ou la rotation</label>
+        <label><input type="radio" name="q18" value="D"> D. La distance</label>
+      </div>
+  
+      <div class="question">
+        <h3>19. Dans un robot suiveur de ligne, quel composant est crucial ?</h3>
+        <label><input type="radio" name="q19" value="A"> A. Écran OLED</label>
+        <label><input type="radio" name="q19" value="B"> B. Moteur pas à pas</label>
+        <label><input type="radio" name="q19" value="C"> C. Capteur infrarouge</label>
+        <label><input type="radio" name="q19" value="D"> D. Capteur de pression</label>
+      </div>
+  
+      <div class="question">
+        <h3>20. Quel est l’avantage principal d’un moteur pas à pas ?</h3>
+        <label><input type="radio" name="q20" value="A"> A. Il tourne en continu</label>
+        <label><input type="radio" name="q20" value="B"> B. Il est très rapide</label>
+        <label><input type="radio" name="q20" value="C"> C. Il permet un contrôle précis du mouvement</label>
+        <label><input type="radio" name="q20" value="D"> D. Il fonctionne sans alimentation</label>
+      </div>
+  
+
+    <button type="button" onclick="submitQuiz()">Soumettre</button>
+  </form>
+
+  <div id="results"></div>
+
+  <script>
+    function submitQuiz() {
+      let score = 0;
+      let corrections = [];
+
+      const q1 = [...document.querySelectorAll('input[name="q1"]:checked')].map(i => i.value);
+      if (q1.includes("B") && q1.includes("C") && q1.length === 2) score++;
+      else corrections.push("Question 1 : Les bonnes réponses étaient B et C.");
+
+      if (document.querySelector('input[name="q2"]:checked')?.value === "A") score++;
+      else corrections.push("Question 2 : La bonne réponse était A.");
+
+      if (document.querySelector('input[name="q3"]:checked')?.value === "C") score++;
+      else corrections.push("Question 3 : La bonne réponse était C.");
+
+      if (document.querySelector('input[name="q4"]:checked')?.value === "C") score++;
+      else corrections.push("Question 4 : La bonne réponse était C.");
+
+      if (document.querySelector('input[name="q5"]:checked')?.value === "B") score++;
+      else corrections.push("Question 5 : La bonne réponse était B.");
+
+      if (document.querySelector('input[name="q6"]:checked')?.value === "A") score++;
+      else corrections.push("Question 6 : La bonne réponse était A.");
+
+      if (document.querySelector('input[name="q7"]:checked')?.value === "B") score++;
+      else corrections.push("Question 7 : La bonne réponse était B.");
+
+      if (document.querySelector('input[name="q8"]:checked')?.value === "C") score++;
+      else corrections.push("Question 8 : La bonne réponse était C.");
+
+      if (document.querySelector('input[name="q9"]:checked')?.value === "B") score++;
+      else corrections.push("Question 9 : La bonne réponse était B.");
+
+      if (document.querySelector('input[name="q10"]:checked')?.value === "C") score++;
+      else corrections.push("Question 10 : La bonne réponse était C.");
+
+      if (document.querySelector('input[name="q11"]:checked')?.value === "C") score++;
+      else corrections.push("Question 11 : La bonne réponse était C.");
+      
+      if (document.querySelector('input[name="q12"]:checked')?.value === "C") score++;
+      else corrections.push("Question 12 : La bonne réponse était C.");
+      
+      if (document.querySelector('input[name="q13"]:checked')?.value === "B") score++;
+      else corrections.push("Question 13 : La bonne réponse était B.");
+      
+      if (document.querySelector('input[name="q14"]:checked')?.value === "C") score++;
+      else corrections.push("Question 14 : La bonne réponse était C.");
+      
+      if (document.querySelector('input[name="q15"]:checked')?.value === "B") score++;
+      else corrections.push("Question 15 : La bonne réponse était B.");
+      
+      if (document.querySelector('input[name="q16"]:checked')?.value === "B") score++;
+      else corrections.push("Question 16 : La bonne réponse était B.");
+      
+      if (document.querySelector('input[name="q17"]:checked')?.value === "B") score++;
+      else corrections.push("Question 17 : La bonne réponse était B.");
+      
+      if (document.querySelector('input[name="q18"]:checked')?.value === "C") score++;
+      else corrections.push("Question 18 : La bonne réponse était C.");
+      
+      if (document.querySelector('input[name="q19"]:checked')?.value === "C") score++;
+      else corrections.push("Question 19 : La bonne réponse était C.");
+      
+      if (document.querySelector('input[name="q20"]:checked')?.value === "C") score++;
+      else corrections.push("Question 20 : La bonne réponse était C.");
+        
+
+      const results = document.getElementById("results");
+      let appreciation = "";
+
+      if (score === 10) {
+        appreciation = "Tu es prêt pour la ligue des robots ! 🏆";
+      } else if (score >= 7) {
+        appreciation = "Solide ! Un peu plus de pratique et tu seras prêt. 🚀";
+      } else if (score >= 4) {
+        appreciation = "Pas mal, mais tu peux faire mieux. Reprends les bases. 💪";
+      } else {
+        appreciation = "Courage ! Chaque expert a été un débutant. 🔧";
+      }
+
+      results.innerHTML = `<p>Tu as obtenu ${score} / 10. ${appreciation}</p>` +
+        corrections.map(c => `<div class="correction">${c}</div>`).join("");
+    }
+  </script>
+</body>
+</html>
