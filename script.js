@@ -83,7 +83,6 @@ function submitQuiz() {
 }
 
 
-
 function startTimer(duration, display) {
     let timer = duration, minutes, seconds;
     const interval = setInterval(() => {
