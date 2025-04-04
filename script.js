@@ -1,0 +1,83 @@
+function submitQuiz() {
+  let score = 0;
+  let corrections = [];
+
+
+  const q1 = [...document.querySelectorAll('input[name="q1"]:checked')].map(i => i.value);
+  if (q1.includes("B") && q1.includes("C") && q1.length === 2) score++;
+  else corrections.push("Question 1 : Les bonnes réponses étaient B et C.");
+
+  if (document.querySelector('input[name="q2"]:checked')?.value === "A") score++;
+  else corrections.push("Question 2 : La bonne réponse était A.");
+
+  if (document.querySelector('input[name="q3"]:checked')?.value === "C") score++;
+  else corrections.push("Question 3 : La bonne réponse était C.");
+
+  if (document.querySelector('input[name="q4"]:checked')?.value === "C") score++;
+  else corrections.push("Question 4 : La bonne réponse était C.");
+
+  if (document.querySelector('input[name="q5"]:checked')?.value === "B") score++;
+  else corrections.push("Question 5 : La bonne réponse était B.");
+
+  if (document.querySelector('input[name="q6"]:checked')?.value === "A") score++;
+  else corrections.push("Question 6 : La bonne réponse était A.");
+
+  if (document.querySelector('input[name="q7"]:checked')?.value === "B") score++;
+  else corrections.push("Question 7 : La bonne réponse était B.");
+
+  if (document.querySelector('input[name="q8"]:checked')?.value === "C") score++;
+  else corrections.push("Question 8 : La bonne réponse était C.");
+
+  if (document.querySelector('input[name="q9"]:checked')?.value === "B") score++;
+  else corrections.push("Question 9 : La bonne réponse était B.");
+
+  if (document.querySelector('input[name="q10"]:checked')?.value === "C") score++;
+  else corrections.push("Question 10 : La bonne réponse était C.");
+
+  if (document.querySelector('input[name="q11"]:checked')?.value === "C") score++;
+  else corrections.push("Question 11 : La bonne réponse était C.");
+  
+  if (document.querySelector('input[name="q12"]:checked')?.value === "C") score++;
+  else corrections.push("Question 12 : La bonne réponse était C.");
+  
+  if (document.querySelector('input[name="q13"]:checked')?.value === "B") score++;
+  else corrections.push("Question 13 : La bonne réponse était B.");
+  
+  if (document.querySelector('input[name="q14"]:checked')?.value === "C") score++;
+  else corrections.push("Question 14 : La bonne réponse était C.");
+  
+  if (document.querySelector('input[name="q15"]:checked')?.value === "B") score++;
+  else corrections.push("Question 15 : La bonne réponse était B.");
+  
+  if (document.querySelector('input[name="q16"]:checked')?.value === "B") score++;
+  else corrections.push("Question 16 : La bonne réponse était B.");
+  
+  if (document.querySelector('input[name="q17"]:checked')?.value === "B") score++;
+  else corrections.push("Question 17 : La bonne réponse était B.");
+  
+  if (document.querySelector('input[name="q18"]:checked')?.value === "C") score++;
+  else corrections.push("Question 18 : La bonne réponse était C.");
+  
+  if (document.querySelector('input[name="q19"]:checked')?.value === "C") score++;
+  else corrections.push("Question 19 : La bonne réponse était C.");
+  
+  if (document.querySelector('input[name="q20"]:checked')?.value === "C") score++;
+  else corrections.push("Question 20 : La bonne réponse était C.");
+    
+
+  const results = document.getElementById("results");
+  let appreciation = "";
+
+  if (score === 20) {
+    appreciation = "Tu es prêt pour la ligue des robots ! 🏆";
+  } else if (score >= 15) {
+    appreciation = "Solide ! Un peu plus de pratique et tu seras prêt. 🚀";
+  } else if (score >= 10) {
+    appreciation = "Pas mal, mais tu peux faire mieux. Reprends les bases. 💪";
+  } else {
+    appreciation = "Courage ! Chaque expert a été un débutant. 🔧";
+  }
+
+  results.innerHTML = `<p>Tu as obtenu ${score} / 20. ${appreciation}</p>` +
+    corrections.map(c => `<div class="correction">${c}</div>`).join("");
+}
