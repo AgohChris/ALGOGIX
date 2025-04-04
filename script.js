@@ -81,3 +81,32 @@ function submitQuiz() {
   results.innerHTML = `<p>Tu as obtenu ${score} / 20. ${appreciation}</p>` +
     corrections.map(c => `<div class="correction">${c}</div>`).join("");
 }
+
+
+
+function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    const interval = setInterval(() => {
+      minutes = Math.floor(timer / 60);
+      seconds = timer % 60;
+  
+      // Formatage des minutes et secondes
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+  
+      display.textContent = `Temps restant : ${minutes}:${seconds}`;
+  
+      if (--timer < 0) {
+        clearInterval(interval);
+        alert("Temps écoulé ! Le quiz sera soumis automatiquement.");
+        submitQuiz(); // Appelle la fonction pour soumettre le quiz
+      }
+    }, 1000);
+  }
+  
+  // Démarrer le compte à rebours de 15 minutes
+  window.onload = function () {
+    const timerDisplay = document.getElementById("timer");
+    const fifteenMinutes = 15 * 60; // 15 minutes en secondes
+    startTimer(fifteenMinutes, timerDisplay);
+  };
