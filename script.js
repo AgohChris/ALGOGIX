@@ -65,22 +65,78 @@ function submitQuiz() {
   else corrections.push("Question 20 : La bonne réponse était C.");
     
 
+  if (document.querySelector('input[name="q21"]:checked')?.value === "B") score++;
+  else corrections.push("Question 21 : La bonne réponse était B.");
+
+  if (document.querySelector('input[name="q22"]:checked')?.value === "B") score++;
+  else corrections.push("Question 22 : La bonne réponse était B.");
+
+  if (document.querySelector('input[name="q23"]:checked')?.value === "C") score++;
+  else corrections.push("Question 23 : La bonne réponse était C.");
+
+  if (document.querySelector('input[name="q24"]:checked')?.value === "C") score++;
+  else corrections.push("Question 24 : La bonne réponse était C.");
+
+  if (document.querySelector('input[name="q25"]:checked')?.value === "D") score++;
+  else corrections.push("Question 25 : La bonne réponse était D.");
+
+  if (document.querySelector('input[name="q26"]:checked')?.value === "C") score++;
+  else corrections.push("Question 26 : La bonne réponse était C.");
+
+  if (document.querySelector('input[name="q27"]:checked')?.value === "C") score++;
+  else corrections.push("Question 27 : La bonne réponse était C.");
+
+  if (document.querySelector('input[name="q28"]:checked')?.value === "B") score++;
+  else corrections.push("Question 28 : La bonne réponse était B.");
+
+  if (document.querySelector('input[name="q29"]:checked')?.value === "B") score++;
+  else corrections.push("Question 29 : La bonne réponse était B.");
+
+  if (document.querySelector('input[name="q30"]:checked')?.value === "C") score++;
+  else corrections.push("Question 30 : La bonne réponse était C.");
+
+  if (document.querySelector('input[name="q31"]:checked')?.value === "B") score++;
+  else corrections.push("Question 31 : La bonne réponse était B.");
+
+  if (document.querySelector('input[name="q32"]:checked')?.value === "C") score++;
+  else corrections.push("Question 32 : La bonne réponse était C.");
+
+  if (document.querySelector('input[name="q33"]:checked')?.value === "D") score++;
+  else corrections.push("Question 33 : La bonne réponse était D.");
+
+  if (document.querySelector('input[name="q34"]:checked')?.value === "B") score++;
+  else corrections.push("Question 34 : La bonne réponse était B.");
+
+  if (document.querySelector('input[name="q35"]:checked')?.value === "C") score++;
+  else corrections.push("Question 35 : La bonne réponse était C.");
+
+  // Affichage des résultats
   const results = document.getElementById("results");
   let appreciation = "";
 
-  if (score === 20) {
+  if (score === 35) {
     appreciation = "Tu es prêt pour la ligue des robots ! 🏆";
-  } else if (score >= 15) {
+  } else if (score >= 25) {
     appreciation = "Solide ! Un peu plus de pratique et tu seras prêt. 🚀";
-  } else if (score >= 10) {
+  } else if (score >= 15) {
     appreciation = "Pas mal, mais tu peux faire mieux. Reprends les bases. 💪";
   } else {
     appreciation = "Courage ! Chaque expert a été un débutant. 🔧";
   }
 
-  results.innerHTML = `<p>Tu as obtenu ${score} / 20. ${appreciation}</p>` +
+  results.innerHTML = `<p>Tu as obtenu ${score} / 35. ${appreciation}</p>` +
     corrections.map(c => `<div class="correction">${c}</div>`).join("");
 }
+
+
+
+
+
+
+
+
+
+
 
 
 function startTimer(duration, display) {
