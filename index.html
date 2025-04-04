@@ -234,7 +234,7 @@
     function submitQuiz() {
       let score = 0;
       let corrections = [];
-      
+
 
       const q1 = [...document.querySelectorAll('input[name="q1"]:checked')].map(i => i.value);
       if (q1.includes("B") && q1.includes("C") && q1.length === 2) score++;
@@ -301,11 +301,11 @@
       const results = document.getElementById("results");
       let appreciation = "";
 
-      if (score === 10) {
+      if (score === 20) {
         appreciation = "Tu es prêt pour la ligue des robots ! 🏆";
-      } else if (score >= 7) {
+      } else if (score >= 15) {
         appreciation = "Solide ! Un peu plus de pratique et tu seras prêt. 🚀";
-      } else if (score >= 4) {
+      } else if (score >= 10) {
         appreciation = "Pas mal, mais tu peux faire mieux. Reprends les bases. 💪";
       } else {
         appreciation = "Courage ! Chaque expert a été un débutant. 🔧";
