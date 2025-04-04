@@ -109,4 +109,3 @@ function startTimer(duration, display) {
     const fifteenMinutes = 15 * 60; // 15 minutes en secondes
     startTimer(fifteenMinutes, timerDisplay);
   };
-  
